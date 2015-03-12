@@ -4,6 +4,12 @@
 
 **IDXParser** parses an IDX-formatted file (such as the [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/) and returns an array of values in the given datatype.
 
+## API
+
+Currently, **IDXParser** has only one function:
+
+  * `parseIDX(file_name)` Parses given file
+
 ## IDX File Format
 
 | Byte # | Description |
