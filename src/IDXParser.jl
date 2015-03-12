@@ -37,12 +37,12 @@ function parseIDX(file_name)
         throw(DomainError())
     end
 
-    dims = Array{Int64}(ntoh(read(fs, Int32, magic_number[4])))
+    dims = Array{Int64}(map(ntoh, read(fs, Int32, magic_number[4])))
 
     contents = read(fs, idx_type, prod(dims))
 
     if idx_type != UInt8 && idx_type != Int8
-        contents = ntoh(contents)
+        contents = map(ntoh, contents)
     end
     
     out = reshape(contents, tuple(dims...))
