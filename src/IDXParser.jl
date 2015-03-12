@@ -2,6 +2,10 @@ module IDXParser
 
 # package code goes here
 
+using Base.Docs
+
+export parseIDX
+
 @doc """
 Parse IDX-formatted file and return an array of values:
   1ˢᵗ byte: 0x00
